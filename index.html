@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Swift-Inspired Quote Generator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .quote-container {
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background-color: #f2ebfd;
+            border-left: 5px solid #7e57c2;
+        }
+        .quote {
+            font-size: 22px;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .attribution {
+            font-weight: 600;
+            text-align: right;
+            color: #7e57c2;
+        }
+        button {
+            background-color: #7e57c2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #5e35b1;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <div class="quote" id="quote-text"></div>
+        <div class="attribution" id="quote-attribution"></div>
+    </div>
+    <button onclick="generateQuote()">New Inspiration</button>
+
+    <script>
+        // Array of Taylor Swift-inspired quotes/themes
+        const quotes = [
+            { text: "Keep believing in your wildest dreams", album: "Inspired by Fearless" },
+            { text: "Begin again every time you hit an obstacle", album: "Inspired by Red" },
+            { text: "Shake off the critics and focus on your work", album: "Inspired by 1989" },
+            { text: "Your thesis story is yours to write", album: "Inspired by Folklore" },
+            { text: "Stay fearless in the face of challenges", album: "Inspired by Fearless" },
+            { text: "Remember why you started this journey", album: "Inspired by Evermore" },
+            { text: "You'll find your voice through persistent work", album: "Inspired by Reputation" },
+            { text: "Today is a new chapter in your academic story", album: "Inspired by Lover" },
+            { text: "The hardest struggles lead to the greatest growth", album: "Inspired by Midnights" },
+            { text: "Trust your own intellectual curiosity", album: "Inspired by Speak Now" },
+            { text: "Every setback is setting up your comeback", album: "Inspired by 1989" },
+            { text: "This research is enchanting in its own way", album: "Inspired by Speak Now" },
+            { text: "The struggle is worth the brilliant outcome ahead", album: "Inspired by Red" },
+            { text: "Your academic reputation builds with each draft", album: "Inspired by Reputation" },
+            { text: "The midnight oil burns brightest for passionate scholars", album: "Inspired by Midnights" },
+            { text: "You're creating your own academic folklore", album: "Inspired by Folklore" },
+            { text: "Look back at how far you've already come", album: "Inspired by Evermore" },
+            { text: "Be the hero of your thesis journey", album: "Inspired by Lover" },
+            { text: "Every chapter brings you closer to your academic dreams", album: "Inspired by The Tortured Poets Department" },
+            { text: "Champion your research with unwavering belief", album: "Inspired by Fearless" },
+            { text: "Your academic universe is expanding with each word", album: "Inspired by The Tortured Poets Department" },
+            { text: "Today's work lights tomorrow's path", album: "Inspired by Midnights" },
+            { text: "Scholars, like stars, shine brightest in the dark", album: "Inspired by Evermore" },
+            { text: "The best research comes from authentic curiosity", album: "Inspired by Lover" },
+            { text: "This thesis is your own masterpiece in progress", album: "Inspired by Folklore" }
+        ];
+
+        // Function to generate a random quote
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+            
+            document.getElementById('quote-text').innerText = `"${selectedQuote.text}"`;
+            document.getElementById('quote-attribution').innerText = `${selectedQuote.album}`;
+        }
+
+        // Generate a quote when the page loads
+        window.onload = generateQuote;
+    </script>
+</body>
+</html>
