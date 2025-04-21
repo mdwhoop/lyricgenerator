@@ -17,7 +17,6 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             background-color: #f2ebfd;
             border-left: 5px solid #7e57c2;
         }
@@ -33,11 +32,14 @@
             text-align: right;
             color: #7e57c2;
         }
-     
     </style>
 </head>
 <body>
-  
+    <div class="quote-container">
+        <div class="quote" id="quote-text"></div>
+        <div class="attribution" id="quote-attribution"></div>
+    </div>
+
     <script>
         // Array of Taylor Swift-inspired quotes/themes
         const quotes = [
